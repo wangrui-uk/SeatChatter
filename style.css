@@ -44,3 +44,21 @@ h1 {
 nav { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
 a { color: var(--accent); text-decoration: none; font-weight: 500; }
 a:hover, a:focus { text-decoration: underline; }
+
+/* Long-form pages (privacy, support): left-aligned reading column. */
+body.doc { display: block; }
+body.doc main { text-align: left; max-width: 44rem; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+body.doc header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+body.doc header nav { gap: 1rem; }
+body.doc .brand { font-weight: 700; color: var(--fg); }
+body.doc h1 { font-size: clamp(1.75rem, 5vw, 2.25rem); margin: 1.75rem 0 0.25rem; }
+body.doc h2 { font-size: 1.2rem; margin: 1.75rem 0 0.4rem; }
+body.doc p, body.doc li { font-size: 1.0625rem; color: var(--fg); margin: 0 0 0.75rem; }
+body.doc ul, body.doc ol { padding-left: 1.4rem; margin: 0 0 0.75rem; }
+body.doc li { margin: 0.25rem 0; }
+body.doc .updated { color: var(--muted); }
+body.doc .box { border: 1px solid color-mix(in srgb, var(--muted) 35%, transparent); border-radius: 12px; padding: 0.85rem 1.1rem; }
+body.doc hr { border: 0; border-top: 1px solid color-mix(in srgb, var(--muted) 35%, transparent); margin: 3rem 0 0.5rem; }
+body.doc footer { color: var(--muted); font-size: 0.9rem; margin-top: 2.5rem; }
+body.doc footer a { font-weight: 500; }
+:lang(zh-Hans) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif; }
