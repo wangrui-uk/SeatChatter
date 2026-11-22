@@ -76,3 +76,4 @@ h3 { color: var(--ink); margin: 0 0 .3rem; font-size: 1.15rem; }
 
 footer { text-align: center; color: var(--muted); font-size: .9rem; padding: 2rem 1.25rem 2.5rem; }
 footer nav { display: flex; gap: 1rem; justify-content: center; margin-bottom: .4rem; flex-wrap: wrap; }
+footer .credit { font-size: .78rem; opacity: .8; margin-top: .3rem; }
