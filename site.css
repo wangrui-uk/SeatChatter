@@ -41,12 +41,13 @@ a:hover, a:focus-visible { text-decoration: underline; }
 .hero picture img { width: 100%; height: auto; border-radius: var(--radius); border: 3px solid var(--ink); box-shadow: 0 8px 0 var(--ink); }
 .hero h1 { font-size: clamp(2.4rem, 7vw, 4rem); color: var(--ink); margin: 1.6rem 0 .2rem; letter-spacing: -.02em; }
 .hero .tag { font-size: clamp(1.1rem, 2.6vw, 1.4rem); color: var(--muted); margin: 0 auto 1.4rem; max-width: 40rem; }
-.store { display: inline-flex; align-items: center; gap: .6rem; background: var(--ink); color: #fff; padding: .8rem 1.4rem;
-  border-radius: 16px; font-weight: 800; font-size: 1.1rem; box-shadow: 0 5px 0 #000; }
-.store:hover { text-decoration: none; transform: translateY(1px); box-shadow: 0 4px 0 #000; }
-.store svg { width: 22px; height: 22px; fill: #fff; }
-.store small { display: block; font-weight: 600; font-size: .75rem; opacity: .85; line-height: 1; }
-.note { color: var(--muted); font-size: .95rem; margin-top: .8rem; }
+/* Apple's official "Download on the App Store" badge (unaltered SVG from Apple Marketing Tools).
+   Guidelines: at least 40 px tall on screen; clear space of at least a quarter of its height on every side. */
+.appstore-badge { display: inline-block; line-height: 0; padding: calc(var(--badge-h) * .25); --badge-h: 56px; border-radius: 12px; }
+.appstore-badge img { height: var(--badge-h); width: auto; }
+.appstore-badge:focus-visible { outline: 3px solid var(--grape); outline-offset: 0; }
+@media (max-width: 680px) { .appstore-badge { --badge-h: 48px; } }
+.note { color: var(--muted); font-size: .95rem; margin-top: .2rem; }
 
 /* Sections */
 section { max-width: 72rem; margin: 0 auto; padding: 3rem 1.25rem 1rem; }
