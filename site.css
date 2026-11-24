@@ -104,3 +104,26 @@ footer .credit { font-size: .78rem; opacity: .8; margin-top: .3rem; }
   .shots-prev { left: -.3rem; } .shots-next { right: -.3rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Trailer: a local poster until the visitor taps play; only then is the YouTube (nocookie) player loaded by assets/js/trailer.js. */
+.trailer { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 22px; border: 3px solid var(--ink);
+  box-shadow: 0 6px 0 var(--ink); background: #000; }
+.trailer-play { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: default; }
+.trailer-play img, .trailer iframe { display: block; width: 100%; height: 100%; object-fit: cover; border: 0; }
+.trailer-icon { display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 84px; height: 84px; border-radius: 50%; align-items: center; justify-content: center;
+  background: var(--sun); color: var(--ink); border: 3px solid var(--ink); box-shadow: 0 5px 0 var(--ink); transition: transform .1s; }
+.trailer-icon svg { width: 38px; height: 38px; margin-left: 5px; }
+.trailer-ready .trailer-play { cursor: pointer; }
+.trailer-ready .trailer-icon { display: flex; }
+.trailer-play:hover .trailer-icon { background: #ffd84f; }
+.trailer-play:active .trailer-icon { transform: translate(-50%, calc(-50% + 2px)); box-shadow: 0 3px 0 var(--ink); }
+.trailer-play:focus-visible { outline: none; }
+.trailer-play:focus-visible .trailer-icon { outline: 3px solid var(--grape); outline-offset: 4px; }
+.trailer-link { margin: 1.2rem 0 0; }
+.trailer-link span { color: var(--muted); font-size: .9rem; margin-left: .4rem; }
+@media (max-width: 680px) {
+  .trailer { border-radius: 18px; }
+  .trailer-icon { width: 60px; height: 60px; border-width: 2.5px; box-shadow: 0 4px 0 var(--ink); }
+  .trailer-icon svg { width: 27px; height: 27px; margin-left: 4px; }
+}
